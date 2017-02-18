@@ -29,6 +29,12 @@ html
         include ./includes/mlh-season-badge.pug
 
         block body-container
+            #modal.modal.fade
+                .modal-header
+                    button.close.close-modal(type="button" data-dismiss="modal" aria-hidden="true") &times;
+                    h4#modal-header
+                .modal-body
+                    span#modal-message
             #page-container
                 #header-container
                     #header.container
@@ -57,4 +63,5 @@ html
             script(src="/static/js/plugins/ajaxForm.js")
             script(src="/static/js/plugins/ajaxGet.js")
             script(src="/static/js/plugins/parallaxIt.js")
+            script(src="/static/js/plugins/modalWindow.js")
             script(src="/static/js/main.js")
