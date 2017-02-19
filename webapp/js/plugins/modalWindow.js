@@ -10,7 +10,6 @@
     var modal_header = $("#modal-header");
 
     $.openModal = function (message, header) {
-        console.log(message);
         modal_message.text(message);
         modal_header.text(header);
         modal_window.modal('show');
