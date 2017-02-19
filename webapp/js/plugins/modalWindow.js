@@ -18,11 +18,9 @@
 
     $.closeModal = function () {
         modal_window.modal('hide');
-        modal_message.text(" ");
-        modal_header.text(" ");
     }
 
-    $(".close-modal").click( function() {
+    $(".modal-footer button").click( function() {
         $.closeModal();
     });
 

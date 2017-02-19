@@ -12,7 +12,7 @@
         error: function(response) {
             console.error('Server Error:', response);
             var err = JSON.parse(response.responseText);
-            alert(err.cause + ': ' + err.message);
+            $.openModal(err.cause + ': ' + err.message, 'Server Error');
         }
     };
 
