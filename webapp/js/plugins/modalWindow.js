@@ -31,4 +31,3 @@
 
 })(jQuery);
 
-$.openModal("testing 12345", "Error");

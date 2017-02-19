@@ -61,7 +61,7 @@
         useFormData: true,
         getData: function() {
             if (!mapPin.is(':visible')) {
-                alert('Please click on your location in the map');
+                $.openModal('Please click on your location in the map', 'Warning');
                 throw new Error('Map location required.');
             }
 
@@ -79,14 +79,14 @@
             console.log(data);
 
             if (!data.g_recaptcha_response) {
-                alert('Captcha required.');
+                $.openModal('Captcha required.', 'Warning');
                 throw new Error('Captcha required.');
             }
 
             return data;
         },
         onAjaxComplete: function() {
-            alert('Help Request Submitted! If no one comes to you in 10 minutes, go to the mentor lounge.');
+            $.openModal('Help Request Submitted! If no one comes to you in 10 minutes, go to the mentor lounge.', 'Alert');
             window.location.href = '/';
         },
         afterError: function() {

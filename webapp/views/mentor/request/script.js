@@ -54,7 +54,7 @@
                     help_request_id: submitBtn.data('id')
             })
         }).done(function() {
-            alert('You have successfully claimed this request');
+            $.openModal('You have successfully claimed this request','Alert');
             $('#status').text('Claimed by me');
         }).fail(function() {
             submitBtn.prop('disabled', false);
@@ -69,7 +69,7 @@
                     help_request_id: submitBtn.data('id')
             })
         }).done(function() {
-            alert('You have successfully released your claim of this request');
+            $.openModal('You have successfully released your claim of this request','Alert');
             window.location.href = '/mentor';
         }).fail(function() {
             submitBtn.prop('disabled', false);

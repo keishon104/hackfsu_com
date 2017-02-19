@@ -71,7 +71,7 @@
                                 attendee_status_id: row.id
                             })
                         }).done(function () {
-                            alert(row.name + ' has been checked in');
+                            $.openModal(row.name + ' has been checked in', 'Alert');
                             dt.ajax.reload();
                         });
                     }

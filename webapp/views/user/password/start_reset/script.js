@@ -12,13 +12,13 @@
             };
 
             if (!data.g_recaptcha_response) {
-                alert('Captcha required.');
+                $.openModal('Captcha required.', 'Warning');
                 throw new Error('Captcha required.');
             }
             return data;
         },
         onAjaxComplete: function() {
-            alert('An email will been sent to the given address if the account exists.');
+            $.openModal('An email will been sent to the given address if the account exists.','Warning');
             window.location.href = '/user/login';
         },
         afterError: function() {

@@ -36,7 +36,7 @@
             };
 
             if (data.availability === 0) {
-                alert('You must select at least one time you think you can help.');
+                $.openModal('You must select at least one time you think you can help.','Warning');
                 throw new Error(JSON.stringify(data));
             }
 

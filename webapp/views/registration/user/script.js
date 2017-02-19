@@ -55,7 +55,7 @@
             };
 
             if (!data.g_recaptcha_response) {
-                alert('Captcha required.');
+                $.openModal('Captcha required.','Warning');
                 throw new Error('Captcha required.');
             }
 
